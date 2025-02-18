@@ -1,0 +1,629 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #A8DADC;
+    color: #333;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #1D3557;
+    padding: 60px 0;
+    color: #F1FAEE;
+}
+
+header h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 4em;
+    margin: 0;
+    letter-spacing: 2px;
+    animation: slideDown 1.5s ease-out;
+}
+
+header p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.5em;
+    margin-top: 20px;
+}
+
+
+.fade-in {
+    animation: fadeIn 2s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.works {
+    margin: 40px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.work-gallery {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: nowrap;
+    padding: 0 20%;
+}
+
+.shorts-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: nowrap;
+    padding: 0 50px;
+}
+
+.work-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.work-item video {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+    border: 2px solid #333;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.work-item:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+
+/* YouTube Long Format (Horizontal) */
+.long-format {
+    width: 32%;
+    aspect-ratio: 16 / 9;
+}
+
+/* YouTube Shorts Format (Vertical) */
+.short-format {
+    width: 45%;
+    aspect-ratio: 9 / 16;
+    object-fit: cover;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    header h1, header p {
+        font-size: 1.5em;
+    }
+
+    .work-gallery, .shorts-gallery {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .work-item {
+        width: 80%;
+    }
+
+    .works {
+        margin-top: 20px;
+    }
+
+    .work-item video {
+        border: 2px solid #555;
+    }
+    .shorts-gallery {
+        flex-wrap: wrap;
+    }
+
+    .short-format {
+        width: 80%;
+        margin: 10px auto;
+    }
+}
+
+/* Additional Improvements */
+.contact, footer {
+    padding: 15px;
+}
+
+footer a {
+    color: #1D3557;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #E63946;
+}
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5em;
+    color: #1D3557;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 5px;
+    background-color: #E63946; /* A vibrant red for emphasis */
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -15px;
+    border-radius: 2px;
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #F1FAEE;
+    color: #333;
+}
+
+a {
+    color: #1D3557;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #E63946;
+}
+button {
+    background-color: #1D3557;
+    color: #F1FAEE;
+    border: none;
+    padding: 10px 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #E63946;
+}
+footer {
+    background-color: #1D3557;
+    color: #F1FAEE;
+    padding: 20px 0;
+}
+
+footer h3 {
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 10px;
+}
+
+footer a {
+    color: #F1FAEE;
+    margin: 0 15px;
+    font-size: 1.2em;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #E63946;
+}
+footer a i {
+    margin-right: 8px;
+}
+.work-item:hover video {
+    transform: scale(1.03);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+html {
+    scroll-behavior: smooth;
+}
+#myhead{
+    color:#F1FAEE;
+}
+/* Add this CSS for responsive video embedding */
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background: #000;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    border-radius: 10px; /* Optional for rounded corners */
+}
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #A8DADC;
+    color: #333;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: #457B9D;
+    padding: 20px;
+    color: #fff;
+}
+
+/* Video Container Styling */
+.video-container {
+    position: relative;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background: #000;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    border-radius: 10px; /* Optional for rounded corners */
+}
+
+/* Long Format Video */
+.long-format .video-container {
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+}
+
+/* Short Format Video */
+.short-format .video-container {
+    padding-bottom: 177.78%; /* 9:16 aspect ratio */
+}
+
+/* Video Works Section */
+.works {
+    margin: 40px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+/* Top row: Long format videos */
+.work-gallery {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: nowrap;
+    width: 100%;
+}
+
+/* Bottom row: Short format videos */
+.shorts-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: nowrap;
+    width: 50%;
+}
+
+/* Work Item Styling */
+.work-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.work-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
+}
+
+/* Specific Dimensions for Long and Short Format Videos */
+.long-format {
+    width: 32%;
+    margin: 0 20px;
+}
+
+.short-format {
+    width: 45%; /* Adjust as necessary for spacing */
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .work-gallery, .shorts-gallery {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .work-item {
+        width: 80%; /* Adjust as necessary for mobile devices */
+    }
+}
+/* Achievements Section Styling */
+.achievements {
+    background-color: #F1FAEE;
+    padding: 60px 20px;
+    color: #1D3557;
+}
+
+.achievements h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.achievements h2::after {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 5px;
+    background-color: #E63946;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -15px;
+    border-radius: 2px;
+}
+
+.achievement-list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+}
+
+.achievement-item {
+    width: 80%;
+    background-color: #A8DADC;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    min-height: 300px; /* Ensure a minimum height */
+    position: relative; /* Add position relative to manage z-index */
+    overflow: hidden; /* Ensure content doesn't overflow */
+}
+
+/* Style for images in achievement items */
+.achievement-item img {
+    width: 200px; /* Set a fixed width */
+    height: 300px; /* Set a fixed height equal to the reel */
+    object-fit: cover; /* Ensure image maintains aspect ratio */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1; /* Ensure image is on top */
+}
+
+.achievement-item h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    color: #1D3557;
+    z-index: 2; /* Ensure text is on top */
+}
+
+.achievement-item p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.1em;
+    color: #333333;
+    z-index: 2; /* Ensure text is on top */
+}
+
+/* Ensure the content within the achievement items fits well */
+.achievement-content {
+    flex-grow: 1;
+}
+
+.achievement-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Style for the Instagram Reel */
+.instagram-reel {
+    width: 200px; /* Set a fixed width equal to the photos */
+    height: 300px; /* Set a fixed height equal to the photos */
+    overflow: hidden;
+    margin-bottom: 15px;
+    z-index: 1; /* Ensure reel is on top */
+}
+
+.instagram-reel iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 10px;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .achievement-item {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        min-height: auto; /* Remove fixed height for small screens */
+    }
+
+    .achievements h2 {
+        font-size: 2em;
+    }
+
+    .achievement-item img {
+        width: 100%; /* Full width for small screens */
+        height: auto; /* Maintain aspect ratio */
+        margin-bottom: 15px;
+    }
+
+    .achievement-item h3 {
+        font-size: 1.5em;
+    }
+
+    .achievement-item p {
+        font-size: 1em;
+    }
+
+    .instagram-reel {
+        width: 100%;
+        height: auto;
+    }
+
+    .instagram-reel iframe {
+        width: 100%;
+        height: auto;
+    }
+}
+/* Contact Section Styling */
+.contact {
+    background-color: #F1FAEE;
+    padding: 30px 20px;
+    color: #1D3557;
+}
+
+.contact h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.contact h2::after {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 5px;
+    background-color: #E63946;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -15px;
+    border-radius: 2px;
+}
+
+.contact p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact label {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.1em;
+}
+
+.contact input,
+.contact textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1em;
+}
+
+.contact button {
+    padding: 10px 20px;
+    background-color: #E63946;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact button:hover {
+    background-color: #d62839;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .contact h2 {
+        font-size: 2em;
+    }
+
+    .contact form {
+        width: 100%;
+    }
+
+    .contact input,
+    .contact textarea {
+        width: 100%;
+    }
+
+    .contact button {
+        font-size: 1em;
+    }
+}
+/* Footer Section Styling */
+.footer {
+    background-color: #1D3557;
+    padding: 20px 20px;
+    color: #F1FAEE;
+    text-align: center;
+}
+
+.footer p {
+    margin: 10px 0;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1em;
+}
+
+.footer .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.footer .social-icons a img {
+    width: 24px; /* Adjust the size of the logos */
+    height: 24px; /* Adjust the size of the logos */
+    transition: transform 0.3s ease;
+}
+
+.footer .social-icons a img:hover {
+    transform: scale(1.1); /* Slightly enlarge the logo on hover */
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .footer .social-icons a img {
+        width: 20px; /* Adjust the size for small screens */
+        height: 20px; /* Adjust the size for small screens */
+    }
+}
+
+
